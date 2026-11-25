@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitui-tui"
+version = "1.0.0"
+description = "A sleek, keyboard-only GitHub client that runs entirely in the terminal."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "textual>=8.0,<9",
+    "httpx>=0.27",
+    "qrcode>=7.4",
+]
+
+[project.scripts]
+gitui = "gitui.app:main"
+
+[tool.setuptools]
+packages = ["gitui", "gitui.screens"]
+
+[tool.setuptools.package-data]
+gitui = ["styles.tcss"]

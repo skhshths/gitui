@@ -1,0 +1,336 @@
+/* gitui — styles. All colors come from the active theme. */
+
+Screen {
+    background: $background;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ---------------------------------------------------------------- bars */
+#topbar {
+    height: 1;
+    background: $panel;
+    color: $foreground;
+    padding: 0 1;
+    text-style: none;
+}
+#topbar {
+    color: $primary;
+}
+
+#tabs {
+    height: 1;
+    padding: 0 1;
+    margin: 1 0 0 0;
+    color: $primary;
+}
+
+#statusbar {
+    height: 1;
+    background: $surface;
+    color: $text-muted;
+    padding: 0 1;
+}
+
+#filter {
+    margin: 1 1 0 1;
+    border: tall $primary;
+    background: $surface;
+}
+
+/* ---------------------------------------------------------------- dashboard */
+#main {
+    height: 1fr;
+    padding: 1 1 0 1;
+}
+
+#table {
+    width: 2fr;
+    height: 1fr;
+    border: round $primary 60%;
+    background: $surface;
+}
+#table:focus {
+    border: round $primary;
+}
+
+#info {
+    width: 1fr;
+    min-width: 34;
+    height: 1fr;
+    margin-left: 1;
+    padding: 1 2;
+    border: round $secondary 50%;
+    border-title-color: $secondary;
+    background: $surface;
+}
+
+DataTable > .datatable--header {
+    background: $panel;
+    color: $secondary;
+    text-style: bold;
+}
+DataTable > .datatable--cursor {
+    background: $primary 35%;
+    color: $foreground;
+    text-style: bold;
+}
+DataTable:focus > .datatable--cursor {
+    background: $primary 55%;
+}
+DataTable > .datatable--even-row {
+    background: $background 25%;
+}
+
+/* ---------------------------------------------------------------- tabs */
+TabbedContent {
+    height: 1fr;
+}
+TabbedContent > ContentSwitcher {
+    height: 1fr;
+}
+TabPane {
+    padding: 1 1 0 1;
+}
+Tabs {
+    margin-top: 1;
+}
+Tab.-active {
+    color: $primary;
+    text-style: bold;
+}
+Underline > .underline--bar {
+    color: $primary;
+    background: $panel;
+}
+
+TabPane DataTable {
+    height: 1fr;
+    border: round $primary 60%;
+    background: $surface;
+}
+TabPane DataTable:focus {
+    border: round $primary;
+}
+
+#readme-scroll, #issue-scroll {
+    height: 1fr;
+    border: round $primary 60%;
+    background: $surface;
+    padding: 0 2;
+}
+#readme-scroll:focus, #issue-scroll:focus {
+    border: round $primary;
+}
+#repo-summary, #issue-head {
+    padding: 1 0;
+    border-bottom: hkey $panel;
+    margin-bottom: 1;
+}
+#issue-scroll {
+    margin: 1 1 0 1;
+}
+Markdown {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+#comments {
+    height: auto;
+}
+.section-title {
+    margin-top: 1;
+    padding: 0 1;
+    background: $panel;
+    color: $secondary;
+    text-style: bold;
+}
+.comment-head {
+    margin-top: 1;
+    padding: 0 1;
+    border-top: hkey $panel;
+}
+.comment {
+    padding: 0 1;
+}
+
+/* ---------------------------------------------------------------- local repo */
+.split {
+    height: 1fr;
+}
+.split .left {
+    width: 2fr;
+    height: 1fr;
+}
+.split .right {
+    width: 3fr;
+    height: 1fr;
+    margin-left: 1;
+    border: round $secondary 50%;
+    background: $surface;
+    padding: 0 1;
+}
+
+/* ---------------------------------------------------------------- dialogs */
+ModalScreen {
+    align: center middle;
+    background: $background 70%;
+}
+
+.box {
+    width: 64;
+    max-width: 95%;
+    height: auto;
+    max-height: 90%;
+    padding: 1 2;
+    border: round $primary;
+    background: $surface;
+}
+.box.wide {
+    width: 100;
+    height: 80%;
+}
+.box.danger {
+    border: round $error;
+}
+.box.danger .box-title {
+    color: $error;
+}
+.box-title {
+    text-style: bold;
+    color: $primary;
+    margin-bottom: 1;
+    width: 1fr;
+}
+.box-body {
+    margin-bottom: 1;
+}
+.field-label {
+    color: $text-muted;
+    margin-top: 1;
+}
+.hint {
+    color: $text-muted;
+    margin-top: 1;
+    height: auto;
+}
+.box Input {
+    border: tall $panel;
+    background: $panel;
+}
+.box Input:focus {
+    border: tall $primary;
+}
+.box TextArea {
+    height: 1fr;
+    min-height: 6;
+    border: tall $panel;
+}
+.box TextArea:focus {
+    border: tall $primary;
+}
+.box OptionList {
+    height: auto;
+    max-height: 20;
+    border: none;
+    background: $surface;
+}
+.switch-row {
+    height: auto;
+    margin-top: 1;
+}
+.switch-row Label {
+    padding: 1 1;
+}
+.buttons {
+    height: auto;
+    margin-top: 1;
+}
+.buttons Button {
+    margin-right: 1;
+}
+.cmd {
+    color: $secondary;
+    margin-bottom: 1;
+}
+.box Log {
+    height: 1fr;
+    border: round $panel;
+    background: $background;
+}
+.help-scroll {
+    height: 1fr;
+}
+.link-box {
+    width: 64;
+}
+.qr {
+    width: auto;
+    margin: 0 0 1 0;
+}
+.url {
+    margin-bottom: 1;
+}
+
+/* ---------------------------------------------------------------- login */
+#login-wrap {
+    height: 1fr;
+    align: center middle;
+}
+#login-card {
+    width: 84;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    padding: 1 3;
+    border: round $primary;
+    background: $surface;
+}
+#logo {
+    color: $primary;
+    text-style: bold;
+    width: auto;
+}
+#tagline {
+    color: $text-muted;
+    margin: 1 0;
+}
+#login-menu {
+    height: auto;
+}
+#methods {
+    height: auto;
+    border: none;
+    background: $surface;
+}
+#device, #token {
+    height: auto;
+}
+#device-row {
+    height: auto;
+    margin: 1 0;
+}
+#device-left {
+    width: 1fr;
+    height: auto;
+    padding-right: 2;
+}
+#device-qr, #token-qr {
+    width: auto;
+    margin: 1 0;
+}
+#device LoadingIndicator {
+    height: 1;
+    margin-top: 1;
+    color: $primary;
+}
+#token Input {
+    border: tall $primary;
+    margin-top: 1;
+}
+
+Footer {
+    background: $panel;
+}
